@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  background-color: hsl(148, 38%, 91%);
+  border: 2px solid red;
+}
+
+.background-container {
+  background-color: white;
+  padding: 10px;
+  margin: 12px;
+  width: 40vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+.firstName_lastName-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 3px;
+  /* border: 2px solid black; */
+  font-family: "Karla", sans-serif;
+  margin-bottom: 15px;
+}
+
+.consent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border: 2px solid black;
+}
+.consent-container {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0px;
+}
+
+/* .firstName {
+  border: 2px solid red;
+} */
+.firstName > *,
+.lastName > *,
+.email-container > *,
+.queryType-container > *,
+.message-container > * {
+  margin: 3px;
+  font-family: "Karla", sans-serif;
+}
+.queryType-container {
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid blue; */
+  margin: 15px 0px;
+}
+
+.generalEenquiry-X-supportRequest,
+.message-container {
+  display: flex;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+}
+button {
+  width: 30vw;
+  background-color: hsl(169, 82%, 27%);
+  border-radius: 6px;
+  height: 40px;
+  border: none;
+  color: white;
+}
+/* .queryType-container p:nth-child(3) {
+  color: brown;
+} */

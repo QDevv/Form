@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css" />
+  </head>
+  <body>
+    <div class="background-container">
+      <h1>Contact US</h1>
+      <form action="" type="text">
+        <div class="firstName_lastName-container">
+          <div class="firstName">
+            <p>First Name *</p>
+
+            <input type="text" class="red-border" />
+
+            <p>This field is required</p>
+          </div>
+          <div class="lastName">
+            <p>Last Name *</p>
+
+            <input type="text" class="red-border" />
+
+            <p>This field is required</p>
+          </div>
+        </div>
+
+        <div class="email-container">
+          <p>Email Address *</p>
+          <input type="email" name="" id="" class="red-border" />
+          <p>Please enter a valid email address</p>
+        </div>
+        <div class="queryType-container">
+          <p>Query Type *</p>
+
+          <div class="generalEenquiry-X-supportRequest">
+            <input
+              type="radio"
+              name="query-type"
+              value="general-enquiry"
+              id=""
+            />General Enquiry
+
+            <input
+              type="radio"
+              name="query-type"
+              value="support-request"
+              id=""
+            />Support Request
+          </div>
+
+          <p>Please select a query type</p>
+        </div>
+
+        <div class="message-container">
+          <label for="message">Message *</label>
+          <textarea name="" id="" cols="30" rows="5" required></textarea>
+          <p>This field is required</p>
+        </div>
+        <div class="">
+          <label for="consent">
+            <input
+              class="red-border"
+              type="checkbox"
+              name="consent"
+              id="consent"
+              required
+            />I consent to being contacted by the team
+          </label>
+          <p>To submit this form, please consent to being contacted</p>
+        </div>
+
+        <button>Submit</button>
+      </form>
+    </div>
+    <script src="form.js"></script>
+  </body>
+</html>
