@@ -10,19 +10,28 @@ const textArea = document.querySelector("textarea");
 const consentCheck = document.getElementById("consent");
 const consentCheckErrorMessage = document.querySelector(".consent-container p");
 
-const paragraphs = document.querySelector("p");
+const paragraphs = document.querySelectorAll("p");
 
-console.log(paragraphs.parentElement.querySelector("input"));
+console.log(paragraphs);
 
-console.log(radio);
+// console.log(paragraphs.parentElement);
 
-console.log(Array.from(radio)[0]);
+// console.log(radio);
+
+// console.log(Array.from(radio)[0]);
 
 submit.addEventListener("click", function () {
-  let inputCheck = Array.from(paragraphs).filter((p) => {
-    return p.parentElement.querySelectorAll("input").value === "";
+  //   console.log(paragraphs.parentNode.querySelector("input").value);
+
+  Array.from(paragraphs).map((p) => {
+    const input = p.parentNode.querySelector("input");
+    console.log(input);
+    if (input.value === "") {
+      console.log("i am workn");
+    }
   });
-  console.log(inputCheck);
+  // .map((p) => (p.style.color = "red"));
+  //   console.log(inputCheck);
 
   Array.from(redBorder)
     .filter((input) => {
