@@ -7,10 +7,11 @@ const QueryErrrorMessage = document.querySelector(
 const textAreaErrorMessage = document.querySelector(".message-container p");
 
 const textArea = document.querySelector("textarea");
-const consentCheck = document.getElementById("consent");
+const consentCheck = document.querySelector(".consentInput");
 const consentCheckErrorMessage = document.querySelector(".consent-container p");
 
-const paragraphs = document.querySelectorAll("p");
+const paragraphs = document.querySelector("p");
+const textInputs = document.querySelectorAll(".text_input");
 
 console.log(paragraphs);
 
@@ -21,15 +22,14 @@ console.log(paragraphs);
 // console.log(Array.from(radio)[0]);
 
 submit.addEventListener("click", function () {
-  //   console.log(paragraphs.parentNode.querySelector("input").value);
+  // console.log(paragraphs.parentNode.querySelector("input"));
 
-  Array.from(paragraphs).map((p) => {
-    const input = p.parentNode.querySelector("input");
-    console.log(input);
-    if (input.value === "") {
-      console.log("i am workn");
-    }
-  });
+  // console.log(Inputs);
+
+  Array.from(textInputs)
+    .filter((input) => input.value === "")
+    .map((input) => (input.nextElementSibling.style.color = "red"));
+  // .map((input) => console.log(input.parentNode.querySelector("input")));
   // .map((p) => (p.style.color = "red"));
   //   console.log(inputCheck);
 
@@ -61,9 +61,9 @@ submit.addEventListener("click", function () {
     textAreaErrorMessage.style.color = "red";
   }
 
-  //   if (consentCheck.checked) {
-  //     console.log("Checkbox is checked");
-  //   } else {
-  //     consentCheckErrorMessage.style.color = "red";
-  //   }
+  if (consentCheck.checked) {
+    console.log("Checkbox is checked");
+  } else {
+    consentCheckErrorMessage.style.color = "red";
+  }
 });
