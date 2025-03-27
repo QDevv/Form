@@ -67,3 +67,9 @@ submit.addEventListener("click", function () {
     consentCheckErrorMessage.style.color = "red";
   }
 });
+
+const parentElement = document.querySelector("#parent");
+let allChildren = parentElement.querySelectorAll(":scope > span");
+
+log;
+allChildren.forEach((item) => item.classList.add("red"));
