@@ -12,23 +12,22 @@ const consentCheckErrorMessage = document.querySelector(".consent-container p");
 
 const paragraphs = document.querySelector("p");
 const textInputs = document.querySelectorAll(".text_input");
+const pr = document.querySelectorAll(".errorText");
 
-console.log(paragraphs);
-
-// console.log(paragraphs.parentElement);
-
-// console.log(radio);
-
-// console.log(Array.from(radio)[0]);
+// console.log(Array.from(pr)[0].classList.add("showErrorText"));
+console.log(QueryErrrorMessage);
 
 submit.addEventListener("click", function () {
-  // console.log(paragraphs.parentNode.querySelector("input"));
+  textInputs.forEach((input) => {
+    if (input.value.trim() === "") {
+      input.nextElementSibling.classList.add("showErrorText");
+    }
+  });
 
-  // console.log(Inputs);
+  // Array.from(textInputs)
+  //   .filter((input) => input.value === "")
+  //   .map((input) => (input.nextElementSibling.style.color = "red"));
 
-  Array.from(textInputs)
-    .filter((input) => input.value === "")
-    .map((input) => (input.nextElementSibling.style.color = "red"));
   // .map((input) => console.log(input.parentNode.querySelector("input")));
   // .map((p) => (p.style.color = "red"));
   //   console.log(inputCheck);
@@ -53,6 +52,7 @@ submit.addEventListener("click", function () {
   if (a) {
     console.log(`Selected value: ${a.value}`);
   } else {
+    QueryErrrorMessage.classList.add("showErrorText");
     QueryErrrorMessage.style.color = "red";
   }
   if (textArea.value) {
@@ -68,8 +68,8 @@ submit.addEventListener("click", function () {
   }
 });
 
-const parentElement = document.querySelector("#parent");
-let allChildren = parentElement.querySelectorAll(":scope > span");
+// const parentElement = document.querySelector("#parent");
+// let allChildren = parentElement.querySelectorAll(":scope > span");
 
-log;
-allChildren.forEach((item) => item.classList.add("red"));
+// log;
+// allChildren.forEach((item) => item.classList.add("red"));

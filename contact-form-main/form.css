@@ -81,3 +81,12 @@ button {
 /* .queryType-container p:nth-child(3) {
   color: brown;
 } */
+.errorText {
+  color: red;
+  display: none;
+}
+
+.showErrorText {
+  color: red;
+  display: block;
+}
